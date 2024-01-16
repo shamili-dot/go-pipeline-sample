@@ -5,7 +5,10 @@ metadata:
   description: harness-ci
   annotations:
     # optional annotations
-    harness.io/project-url: https://app.harness.io/ng/account/nomLpGV7S2OlajW8DJKiqA/all/orgs/default/projects/Shamili_Practice/
+    #harness.io/project-url: https://app.harness.io/ng/account/nomLpGV7S2OlajW8DJKiqA/all/orgs/default/projects/Shamili_Practice/
+    harness.io/pipelines: |
+      labelA: https://app.harness.io/ng/account/nomLpGV7S2OlajW8DJKiqA/all/orgs/default/projects/Shamili_Practice/pipelines/
+      
   tags:
     - java
 
