@@ -7,7 +7,6 @@ metadata:
     # optional annotations
     harness.io/pipelines: |
       Pipeline1: https://app.harness.io/ng/account/nomLpGV7S2OlajW8DJKiqA/all/ci/orgs/default/projects/Shamili_Practice/pipelines/Build_CICD_1705428650294
-      Pipeline2: https://app.harness.io/ng/account/nomLpGV7S2OlajW8DJKiqA/all/ci/orgs/default/projects/Shamili_Practice/pipelines/Build_go_pipeline_sample_1705426039793
   tags:
     - java
 
