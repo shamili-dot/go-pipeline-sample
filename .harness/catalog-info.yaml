@@ -1,16 +1,14 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: harness-ci
-  description: harness-ci
+  name: demo
+  description: demo
   annotations:
     # optional annotations
     harness.io/pipelines: |
-      labelA: https://app.harness.io/ng/account/nomLpGV7S2OlajW8DJKiqA/all/ci/orgs/default/projects/Shamili_Practice/pipelines/Build_CICD_1705428650294 
-      labelB: https://app.harness.io/ng/account/nomLpGV7S2OlajW8DJKiqA/all/ci/orgs/default/projects/Shamili_Practice/pipelines/Build_go_pipeline_sample_1705426039793
-    
-    
-    tags:
+      Pipeline1: https://app.harness.io/ng/account/nomLpGV7S2OlajW8DJKiqA/all/ci/orgs/default/projects/Shamili_Practice/pipelines/Build_CICD_1705428650294
+      Pipeline2: https://app.harness.io/ng/account/nomLpGV7S2OlajW8DJKiqA/all/ci/orgs/default/projects/Shamili_Practice/pipelines/Build_go_pipeline_sample_1705426039793
+  tags:
     - java
 
   links:
@@ -38,4 +36,4 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: user:guest
+  owner: team-a
