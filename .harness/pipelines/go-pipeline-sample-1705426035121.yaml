@@ -18,23 +18,42 @@ pipeline:
           execution:
             steps:
               - step:
-                  identifier: gobuild
-                  name: go_build
+                  identifier: gotest
+                  name: run_unit_test
                   spec:
-                    command: go build
+                    connectorRef: <+input>
+                    image: golang:1.15
+                    shell: Sh
+                    command: |-
+                      set +e
+                      go get gotest.tools/gotestsum
+                      gotestsum --format=standard-verbose --junitfile unit-tests.xml
+                      exit 0
+                    reports:
+                      type: JUnit
+                      spec:
+                        paths:
+                          - "*.xml"
                   timeout: ""
                   type: Run
               - step:
-                  identifier: gotest
-                  name: go_test
-                  spec:
-                    command: go test -v ./...
-                  timeout: ""
                   type: Run
+                  name: Build_app_code
+                  identifier: Build_app_code
+                  spec:
+                    connectorRef: <+input>
+                    image: golang:1.15
+                    shell: Sh
+                    command: |-
+                      set +e
+                      go get gotest.tools/gotestsum
+                      CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -tags netgo
+                      exit 0
               - step:
                   identifier: dockerbuild
                   name: docker_build
                   spec:
+                    connectorRef: shamili_docker_registry
                     image: plugins/docker
                     settings:
                       dry_run: "true"
@@ -49,4 +68,5 @@ pipeline:
             type: Cloud
             spec: {}
         type: CI
+        description: ""
   tags: {}
