@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: demo
-  description: demo
+  name: harness-ci
+  description: harness-ci
   annotations:
     # optional annotations
     harness.io/pipelines: |
@@ -36,4 +36,4 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: team-a
+  owner: user: Guest
