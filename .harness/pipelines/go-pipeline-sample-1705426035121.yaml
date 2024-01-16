@@ -1,6 +1,6 @@
 pipeline:
   identifier: Build_go_pipeline_sample_1705426039793
-  name: Build go-pipeline-sample
+  name: Harness-CI-Docker
   orgIdentifier: default
   projectIdentifier: Shamili_Practice
   properties:
@@ -43,9 +43,10 @@ pipeline:
                   timeout: ""
                   type: Plugin
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
-            spec: {}
             type: Cloud
+            spec: {}
         type: CI
+  tags: {}
