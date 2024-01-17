@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_go_pipeline_sample_1705478694135-pr-trigger-input-set
+  identifier: Build_go_pipeline_sample_1705478694135prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Shamili_Practice
+  pipeline:
+    identifier: Build_go_pipeline_sample_1705478694135
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
