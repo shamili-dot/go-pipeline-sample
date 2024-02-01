@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: go-pipeline-sample
+  annotations:
+    github.com/project-slug: shamili-dot/go-pipeline-sample
+spec:
+  type: other
+  lifecycle: unknown
+  owner: guests
