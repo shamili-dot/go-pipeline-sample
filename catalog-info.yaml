@@ -1,10 +1,27 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: go-pipeline-sample
+  name: harness
+  description: harness
   annotations:
-    github.com/project-slug: shamili-dot/go-pipeline-sample
+    # optional annotations
+    harness.io/pipelines: |
+      Pipeline1: https://app.harness.io/ng/account/nomLpGV7S2OlajW8DJKiqA/all/orgs/default/projects/Shamili_Practice/pipelines/Build_go_pipeline_sample_1705421159607/
+      Pipeline2: https://app.harness.io/ng/account/nomLpGV7S2OlajW8DJKiqA/all/orgs/default/projects/Shamili_Practice/pipelines/Build_CICD_1705428650294/
+
+  tags:
+    - java
+
+  links:
+    - url: https://example.com/user
+      title: Examples Users
+      icon: user
+    - url: https://example.com/group
+      title: Example Group
+      icon: group
+   
+
 spec:
-  type: other
-  lifecycle: unknown
-  owner: guests
+  type: service
+  lifecycle: experimental
+  owner: user:guest
