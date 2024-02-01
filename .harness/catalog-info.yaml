@@ -1,40 +1,22 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: harness
-  description: harness
+  name: artist-web
+  description: The place to be, for great artists
+  labels:
+    example.com/custom: custom_label_value
   annotations:
-    # optional annotations
-    harness.io/pipelines: |
-      Pipeline1: https://app.harness.io/ng/account/nomLpGV7S2OlajW8DJKiqA/all/orgs/default/projects/Shamili_Practice/pipelines/Build_go_pipeline_sample_1705421159607/
-      Pipeline2: https://app.harness.io/ng/account/nomLpGV7S2OlajW8DJKiqA/all/orgs/default/projects/Shamili_Practice/pipelines/Build_CICD_1705428650294/
-
+    example.com/service-discovery: artistweb
+    circleci.com/project-slug: github/example-org/artist-website
   tags:
     - java
-
   links:
-    - url: https://example.com/user
-      title: Examples Users
-      icon: user
-    - url: https://example.com/group
-      title: Example Group
-      icon: group
-    - url: https://example.com/cloud
-      title: Link with Cloud Icon
-      icon: cloud
-    - url: https://example.com/dashboard
-      title: Dashboard
+    - url: https://admin.example-org.com
+      title: Admin Dashboard
       icon: dashboard
-    - url: https://example.com/help
-      title: Support
-      icon: help
-    - url: https://example.com/web
-      title: Website
-      icon: web
-    - url: https://example.com/alert
-      title: Alerts
-      icon: alert
+      type: admin-dashboard
 spec:
-  type: service
-  lifecycle: experimental
-  owner: user:guest
+  type: website
+  lifecycle: production
+  owner: artist-relations-team
+  system: public-websites
